@@ -268,42 +268,46 @@ function MelodyExplorerMainContainer() {
     );
   }
 
-  // If language is not yet selected, prompt user for language
+  // If language is not yet selected, prompt user for language with a 3x3 grid
   if (!language) {
     return (
-      <div className="app melody-bg" style={{ minHeight: '100vh' }}>
-        <div style={{
-          display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-          height: '100vh', width: '100vw'
-        }}>
-          <div className="logo melody-logo" style={{
-            color: 'var(--secondary)', fontSize: '2rem', marginBottom: 24,
-            background: 'rgba(255,255,255,0.85)', padding: '18px 32px', borderRadius: '12px'
+      <div className="app melody-bg" style={{ minHeight: '100vh', minWidth: '100vw' }}>
+        <div className="melody-language-card-screen">
+          <div className="logo melody-logo melody-logo-lg" style={{
+            color: 'var(--base-light)', fontSize: '2.25rem', marginBottom: 28,
+            background: 'rgba(25,20,20,0.82)', padding: '22px 38px', borderRadius: '15px', boxShadow: '0 6px 36px 0 rgba(29,185,84,0.19)'
           }}>
-            <span className="logo-symbol" style={{ color: 'var(--primary)', fontSize: 42, marginRight: 8 }}>♫</span>
+            <span className="logo-symbol" style={{ color: 'var(--accent)', fontSize: 48, marginRight: 12 }}>♫</span>
             MelodyExplorer
           </div>
-          <div style={{
-            fontSize: '1.27rem', color: 'var(--primary)', marginBottom: 14,
-            fontWeight: 600, textAlign: 'center'
-          }}>
-            Select your music language to begin
+          <div className="melody-language-card-title">
+            <span>Select your music language</span>
           </div>
-          <select
-            aria-label="Select language"
-            defaultValue=""
-            className="lang-select"
-            style={{
-              background: 'var(--base-light)', color: 'var(--primary)',
-              border: '1.6px solid var(--primary)', minWidth: 180, minHeight: 44, fontSize: "1.1rem"
-            }}
-            onChange={e => { if (e.target.value) handleLanguageChange(e); }}
-          >
-            <option disabled value="">Choose Language…</option>
-            {LANGUAGE_LIST.map(l =>
-              <option key={l.code} value={l.code}>{l.label}</option>
-            )}
-          </select>
+          <div className="language-card-grid">
+            {LANGUAGE_LIST.map(l => (
+              <button
+                key={l.code}
+                className="language-card"
+                aria-label={`Choose ${l.label}`}
+                onClick={() => { setLanguage(l.code); setSelectedDirector(null); setSpotifyResults([]); setSearchQuery(''); }}
+                tabIndex={0}
+              >
+                <span className="language-emoji" aria-hidden="true">
+                  {l.code === "en" ? "🇬🇧"
+                    : l.code === "hi" ? "🇮🇳"
+                    : l.code === "ta" ? "🇮🇳"
+                    : l.code === "te" ? "🇮🇳"
+                    : l.code === "ml" ? "🇮🇳"
+                    : "🎵"}
+                </span>
+                <span className="language-label">{l.label}</span>
+              </button>
+            ))}
+            {/* Filler boxes for grid look (if needed) */}
+            {[...Array(9 - LANGUAGE_LIST.length)].map((_, idx) => (
+              <div key={`filler-${idx}`} className="language-card language-card-filler" aria-hidden="true"></div>
+            ))}
+          </div>
         </div>
       </div>
     );
