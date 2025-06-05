@@ -24,35 +24,35 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
+  letter-spacing: 0.005em;
 }
 
 /* Music themed background */
 .melody-bg {
-  /* Colorful music gradients + embedded SVG for musical notes and wave graphics */
+  /* Deeper gradients, music notes, and wave overlay for bolder theme */
   min-height: 100vh;
   width: 100vw;
   position: relative;
   overflow-x: hidden;
   background:
-    /* Themed radial gradients */
-    linear-gradient(135deg, #E0C3FC 0%, #8EC5FC 100%) fixed,
-    radial-gradient(ellipse at 60% 80%, var(--music-bg-2) 0%, transparent 70%),
-    radial-gradient(ellipse at 35% 14%, var(--music-bg-1) 0%, transparent 70%),
-    radial-gradient(ellipse at 88% 0%, var(--music-bg-3) 0%, transparent 80%);
+    /* Mood gradients */
+    linear-gradient(135deg, #6226ba 0%, #12052b 59%, #1db954 100%) fixed,
+    radial-gradient(ellipse 70% 18% at 60% 90%, var(--music-bg-2) 0%, transparent 70%),
+    radial-gradient(ellipse 48% 36% at 38% 11%, var(--music-bg-1) 0%, transparent 75%),
+    radial-gradient(ellipse 45% 23% at 92% 4%, var(--music-bg-3) 0%, transparent 90%);
   background-color: var(--base-dark);
-  /* Overlay SVG music notes for extra effect */
 }
 .melody-bg::before {
-  /* Music notes SVG pattern */
+  /* Music notes SVG (more prominent) and floating notes for musical feel */
   content: "";
   pointer-events: none;
   position: fixed;
   left: 0; top: 0; right: 0; bottom: 0;
-  opacity: 0.22;
+  opacity: 0.33;
   z-index: 0;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" fill="none"><g fill="black" fill-opacity="0.22"><path d="M70 100c11-5 22-10 33-7v62a10 10 0 1 1-8-2V100M190 220c8-4 16-8 26-6v44a10 10 0 1 1-8-2v-36M410 120c7-4 18-9 29-7v80a10 10 0 1 1-8-2v-71M720 360c16-3 28-9 41-2v64a10 10 0 1 1-8-2v-60" stroke="black" stroke-width="4"/><ellipse cx="105" cy="163" rx="9" ry="6"/><ellipse cx="226" cy="258" rx="7" ry="5"/><ellipse cx="440" cy="205" rx="9" ry="7"/><ellipse cx="761" cy="427" rx="12" ry="8"/></g></svg>');
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="760" fill="none"><g><g><path d="M70 110c13-7 24-15 33-11v72a11 10 0 1 1-8-10V110" stroke="%23F5C518" stroke-width="6"/><ellipse cx="102" cy="183" rx="14" ry="8" fill="%231db954" fill-opacity="0.28"/><ellipse cx="162" cy="109" rx="7" ry="6" fill="%23eb81d5" fill-opacity="0.18"/><path d="M190 220c8-4 16-8 26-6v54a10 10 0 1 1-8-6v-48" stroke="%2372d7f7" stroke-width="5"/><ellipse cx="233" cy="278" rx="12" ry="7" fill="%23eb81d5" fill-opacity="0.23"/><path d="M410 120c10-7 21-15 29-6v90a11 10 0 1 1-8-6v-84" stroke="%23F5C518" stroke-width="6"/><ellipse cx="446" cy="215" rx="12" ry="9" fill="%231db954" fill-opacity="0.17"/><path d="M720 360c19-1 28-14 41-8v80a11 10 0 1 1-8-4v-76" stroke="%23eb81d5" stroke-width="7"/><ellipse cx="771" cy="437" rx="16" ry="8" fill="%23F5C518" fill-opacity="0.25"/></g></g></svg>');
   background-repeat: repeat;
-  background-size: 460px 320px;
+  background-size: 650px 380px;
   min-height: 100vh;
   min-width: 100vw;
 }
