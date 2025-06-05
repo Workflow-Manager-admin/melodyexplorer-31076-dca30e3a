@@ -94,10 +94,14 @@ const MUSIC_DIRECTORS = {
 };
 // End of sample data
 
-// PUBLIC_INTERFACE
+/**
+ * PUBLIC_INTERFACE
+ * Main container for MelodyExplorer: prompts for language, then shows music directors of that language.
+ */
 function MelodyExplorerMainContainer() {
   // UI & State Hooks
-  const [language, setLanguage] = useState('en');
+  // Null language means prompt for language selection
+  const [language, setLanguage] = useState(null);
   const [selectedDirector, setSelectedDirector] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [spotifyResults, setSpotifyResults] = useState([]);
