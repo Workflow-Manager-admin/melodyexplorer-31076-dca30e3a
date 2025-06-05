@@ -268,6 +268,48 @@ function MelodyExplorerMainContainer() {
     );
   }
 
+  // If language is not yet selected, prompt user for language
+  if (!language) {
+    return (
+      <div className="app melody-bg" style={{ minHeight: '100vh' }}>
+        <div style={{
+          display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+          height: '100vh', width: '100vw'
+        }}>
+          <div className="logo melody-logo" style={{
+            color: 'var(--secondary)', fontSize: '2rem', marginBottom: 24,
+            background: 'rgba(255,255,255,0.85)', padding: '18px 32px', borderRadius: '12px'
+          }}>
+            <span className="logo-symbol" style={{ color: 'var(--primary)', fontSize: 42, marginRight: 8 }}>♫</span>
+            MelodyExplorer
+          </div>
+          <div style={{
+            fontSize: '1.27rem', color: 'var(--primary)', marginBottom: 14,
+            fontWeight: 600, textAlign: 'center'
+          }}>
+            Select your music language to begin
+          </div>
+          <select
+            aria-label="Select language"
+            defaultValue=""
+            className="lang-select"
+            style={{
+              background: 'var(--base-light)', color: 'var(--primary)',
+              border: '1.6px solid var(--primary)', minWidth: 180, minHeight: 44, fontSize: "1.1rem"
+            }}
+            onChange={e => { if (e.target.value) handleLanguageChange(e); }}
+          >
+            <option disabled value="">Choose Language…</option>
+            {LANGUAGE_LIST.map(l =>
+              <option key={l.code} value={l.code}>{l.label}</option>
+            )}
+          </select>
+        </div>
+      </div>
+    );
+  }
+
+  // Otherwise, display the normal UI
   return (
     <div className="app melody-bg">
       <nav className="navbar melody-navbar">
