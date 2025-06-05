@@ -1,18 +1,18 @@
 :root {
   --primary: #1DB954;
-  --secondary: #191414;
+  --secondary: #23143a;
   --accent: #F5C518;
-  --base-light: #23143a;
-  --base-light-extra: #342159;
-  --base-dark: #12052b;
-  --music-bg-1: rgba(106,37,151,0.14);
-  --music-bg-2: rgba(29,185,84,0.16);
-  --music-bg-3: rgba(245,197,24,0.19);
+  --base-light: #342159;
+  --base-light-extra: #463084;
+  --base-dark: #11062a;
+  --music-bg-1: rgba(106,37,151,0.16);
+  --music-bg-2: rgba(29,185,84,0.22);
+  --music-bg-3: rgba(245,197,24,0.23);
   --note-pink: #eb81d5;
   --note-blue: #72d7f7;
   --note-orange: #F5C518;
-  --text-color: #ece6fa;            /* Light text for dark music bg */
-  --text-secondary: rgba(236,230,250,0.80);
+  --text-color: #fffefa;            /* Strong light for vivid musical drk bg */
+  --text-secondary: rgba(255,255,255,0.84);
   --border-color: #362557;
 }
 
