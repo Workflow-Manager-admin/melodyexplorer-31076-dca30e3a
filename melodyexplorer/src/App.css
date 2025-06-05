@@ -29,32 +29,57 @@ body {
 
 /* Music themed background */
 .melody-bg {
-  /* Deeper gradients, music notes, and wave overlay for bolder theme */
+  /* Strong music-inspired background: layered SVG waves, floating notes, instruments */
   min-height: 100vh;
   width: 100vw;
   position: relative;
   overflow-x: hidden;
+  /* Layered vibrant gradient and abstract waves for energy */
   background:
-    /* Mood gradients */
-    linear-gradient(135deg, #6226ba 0%, #12052b 59%, #1db954 100%) fixed,
-    radial-gradient(ellipse 70% 18% at 60% 90%, var(--music-bg-2) 0%, transparent 70%),
-    radial-gradient(ellipse 48% 36% at 38% 11%, var(--music-bg-1) 0%, transparent 75%),
-    radial-gradient(ellipse 45% 23% at 92% 4%, var(--music-bg-3) 0%, transparent 90%);
+    linear-gradient(125deg, #2a194a 0%, #6226ba 43%, #191414 89%, #1db954 100%) fixed,
+    repeating-radial-gradient(ellipse at 47% 20%, var(--music-bg-2) 0%, transparent 62%),
+    radial-gradient(ellipse 40% 28% at 58% 86%, var(--music-bg-3) 0%, transparent 78%),
+    linear-gradient(115deg, rgba(245,197,24,0.03) 25%, transparent 65%),
+    radial-gradient(ellipse 34% 12% at 13% 10%, var(--music-bg-1) 0%, transparent 82%);
   background-color: var(--base-dark);
 }
+
 .melody-bg::before {
-  /* Music notes SVG (more prominent) and floating notes for musical feel */
+  /* STRONG: SVG musical art, floating animated notes & instrument icons */
   content: "";
   pointer-events: none;
   position: fixed;
   left: 0; top: 0; right: 0; bottom: 0;
-  opacity: 0.33;
   z-index: 0;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="760" fill="none"><g><g><path d="M70 110c13-7 24-15 33-11v72a11 10 0 1 1-8-10V110" stroke="%23F5C518" stroke-width="6"/><ellipse cx="102" cy="183" rx="14" ry="8" fill="%231db954" fill-opacity="0.28"/><ellipse cx="162" cy="109" rx="7" ry="6" fill="%23eb81d5" fill-opacity="0.18"/><path d="M190 220c8-4 16-8 26-6v54a10 10 0 1 1-8-6v-48" stroke="%2372d7f7" stroke-width="5"/><ellipse cx="233" cy="278" rx="12" ry="7" fill="%23eb81d5" fill-opacity="0.23"/><path d="M410 120c10-7 21-15 29-6v90a11 10 0 1 1-8-6v-84" stroke="%23F5C518" stroke-width="6"/><ellipse cx="446" cy="215" rx="12" ry="9" fill="%231db954" fill-opacity="0.17"/><path d="M720 360c19-1 28-14 41-8v80a11 10 0 1 1-8-4v-76" stroke="%23eb81d5" stroke-width="7"/><ellipse cx="771" cy="437" rx="16" ry="8" fill="%23F5C518" fill-opacity="0.25"/></g></g></svg>');
+  opacity: 0.57;
+  background: url('data:image/svg+xml;utf8,<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="a" x1="800" y1="0" x2="800" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="%236226ba"/><stop offset="1" stop-color="%231db954" stop-opacity="0.53"/></linearGradient></defs><g opacity="0.87"><path d="M0 840 Q 300 890 600 850 T 1600 900 Q 1400 960 1200 900 T 1000 880 Q 900 910 750 840 Q 450 780 0 900" fill="url(%23a)" opacity="0.25"/><ellipse cx="210" cy="200" rx="38" ry="19" fill="%23eb81d5" fill-opacity="0.19"/><ellipse cx="1430" cy="185" rx="28" ry="14" fill="%231db954" fill-opacity="0.18"/><ellipse cx="460" cy="480" rx="22" ry="9" fill="%23F5C518" fill-opacity="0.17"/><ellipse cx="1190" cy="620" rx="17" ry="12" fill="%2372d7f7" fill-opacity="0.21"/><path d="M95 300c18-10 38-21 50-7v92a13 13 0 1 1-10-13V300" stroke="%23F5C518" stroke-width="7"/><ellipse cx="137" cy="405" rx="23" ry="11" fill="%231db954" fill-opacity="0.29"/><path d="M1340 780c22-13 42-10 63-2v90a14 14 0 1 1-10-7v-83" stroke="%2372d7f7" stroke-width="8"/><ellipse cx="1482" cy="874" rx="19" ry="13" fill="%23F5C518" fill-opacity="0.23"/><g><g opacity="0.65"><ellipse cx="990" cy="120" rx="14" ry="7" fill="%23eb81d5" fill-opacity="0.13"/><ellipse cx="1550" cy="330" rx="21" ry="14" fill="%23F5C518" fill-opacity="0.14"/><ellipse cx="700" cy="180" rx="19" ry="11" fill="%2372d7f7" fill-opacity="0.16"/></g></g><g opacity="0.7"><path d="M330 680 Q 370 622 430 655 T 520 684" stroke="%23F5C518" stroke-width="8" fill="none"/><ellipse cx="380" cy="664" rx="12" ry="7" fill="%23eb81d5" fill-opacity="0.33"/><ellipse cx="510" cy="690" rx="13" ry="8" fill="%231db954" fill-opacity="0.19"/><ellipse cx="450" cy="640" rx="7" ry="6" fill="%23F5C518" fill-opacity="0.22"/></g></g><g opacity="0.44"><!-- Music Note G Clef Icon --><path d="M1280 260 q-28 -16 -34 -53 q-4 -22 8 -41 q10 -16 28 -16 q19 0 31 16 q13 18 9 41 q-7 37 -34 53 M1280 260 v38" stroke="%23eb81d5" stroke-width="7" fill="none"/><ellipse cx="1280" cy="300" rx="14" ry="10" fill="%23F5C518" fill-opacity="0.34"/></g><!-- Guitar Icon (Abstract style) --><g opacity="0.24"><rect x="1348" y="370" width="80" height="12" rx="6" fill="%23eb81d5" fill-opacity="0.45" transform="rotate(-24 1348 370)"/><ellipse cx="1439" cy="377" rx="22" ry="12" fill="%231db954" fill-opacity="0.27"/><ellipse cx="1424" cy="372" rx="7" ry="7" fill="black" fill-opacity="0.12"/><ellipse cx="1361" cy="377" rx="7" ry="7" fill="black" fill-opacity="0.11"/></g></svg>');
   background-repeat: repeat;
-  background-size: 650px 380px;
+  background-size: 780px 480px;
   min-height: 100vh;
   min-width: 100vw;
+  animation: floatingNotes 24s linear infinite;
+}
+
+@keyframes floatingNotes {
+  0% { background-position: 0 0, 0 0;}
+  100% { background-position: 180px 190px, 0 0; }
+}
+
+.melody-bg::after {
+  /* Creative: Music waveform SVG overlays & subtle piano keys at bottom */
+  content: "";
+  pointer-events: none;
+  display: block;
+  position: fixed;
+  left: 0; bottom: 0; width: 100vw; height: 180px;
+  opacity: .40;
+  z-index: 1;
+  background:
+    url('data:image/svg+xml;utf8,<svg width="100%" height="180" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="180" fill="white" fill-opacity="0"/><path d="M0 153 Q 115 155 170 139 Q 225 123 270 156 Q 320 193 445 172 Q 605 145 780 170 Q 1022 210 1600 153 V180 H0 Z" fill="%236226ba" fill-opacity="0.15"/><path d="M0 135 Q 220 175 355 145 Q 530 104 680 120 Q 810 133 940 120 Q 1171 95 1450 160 Q 1510 180 1600 149 V180 H0 Z" fill="%231db954" fill-opacity="0.22"/><rect x="88" y="148" width="21" height="22" fill="black" fill-opacity="0.22"/><rect x="150" y="156" width="12" height="13" fill="black" fill-opacity="0.16"/><rect x="560" y="169" width="22" height="9" fill="black" fill-opacity="0.13"/><rect x="1440" y="152" width="25" height="20" fill="black" fill-opacity="0.10"/><ellipse cx="90" cy="168" rx="17" ry="7" fill="%2372d7f7" fill-opacity="0.25"/><ellipse cx="900" cy="160" rx="41" ry="13" fill="%23eb81d5" fill-opacity="0.15"/><!-- Stylized piano keys top line of wave --><rect x="24" y="154" width="15" height="25" fill="white" fill-opacity="0.69"/><rect x="52" y="158" width="13" height="19" fill="white" fill-opacity="0.38"/><rect x="600" y="166" width="11" height="14" fill="white" fill-opacity="0.40"/><rect x="810" y="154" width="16" height="26" fill="white" fill-opacity="0.37"/></svg>');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 100vw;
+  min-height: 180px;
 }
 
 .melody-bg::after {
