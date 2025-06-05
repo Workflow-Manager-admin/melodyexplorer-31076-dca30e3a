@@ -581,13 +581,15 @@ body {
 
 .title {
   font-size: 3.5rem;
-  font-weight: 600;
-  line-height: 1.2;
+  font-weight: 700;
+  line-height: 1.19;
   margin: 0;
+  color: var(--note-pink);
+  text-shadow: 0 6px 44px rgba(245,197,24,0.15), 0 2px 2px rgba(18,5,36,0.09);
 }
 
 .description {
-  font-size: 1.1rem;
+  font-size: 1.13rem;
   line-height: 1.5;
   color: var(--text-secondary);
   max-width: 600px;
@@ -595,22 +597,28 @@ body {
 }
 
 .btn {
-  background-color: var(--base-light);
-  color: white;
+  background-color: var(--primary);
+  color: var(--base-dark);
   border: none;
-  border-radius: 4px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: 500;
+  border-radius: 5px;
+  padding: 10px 23px;
+  font-size: 1.06rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.22s, color .13s;
+  box-shadow: 0 1.5px 8px 0 rgba(29,185,84,0.08);
 }
 
-.btn:hover {
-  background-color: #7691ff;
+.btn:hover, .btn:focus {
+  background-color: var(--accent);
+  color: var(--secondary);
 }
 
 .btn-large {
   padding: 12px 24px;
-  font-size: 1.1rem;
+  font-size: 1.19rem;
+}
+
+.melody-section-title, .melody-hero .subtitle, .melody-hero .title {
+  color: var(--note-orange);
 }
